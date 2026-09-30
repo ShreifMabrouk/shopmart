@@ -14,7 +14,7 @@ export async function payCach(cartId: string, shippingAddress: userDataCheckout)
 
 
     try {
-        const res = await fetch(`https://ecommerce.routemisr.com/api/v1/orders/checkout-session/${cartId}?url=${process.env.NEXTAUTH_URL}`, {
+        const res = await fetch(`${process.env.API}orders/checkout-session/${cartId}?url=${process.env.NEXTAUTH_URL}`, {
 
         method: "POST",
         body: JSON.stringify({

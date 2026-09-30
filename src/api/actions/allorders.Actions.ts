@@ -13,7 +13,7 @@ export async function allordersActions() {
 
 
     try {
-        const res = await fetch("https://ecommerce.routemisr.com/api/v1/orders/", {
+        const res = await fetch(`${process.env.API}orders/`, {
 
         headers: {
             token: token,
